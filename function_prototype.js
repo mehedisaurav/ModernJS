@@ -40,18 +40,26 @@ const matchingBlock =()=> {
 
 const transitionMove = (box)=>{
     console.log(box);
-    let item13 = document.querySelector(".flexbox-item-13")
-    // let X=item13.getBoundingClientRect().x;
-    // let Y = item13.getBoundingClientRect().y;
-    console.log(box.getBoundingClientRect().y)
-    console.log(box.getBoundingClientRect().x)
-    item13.style.transform = `translateY(${box.getBoundingClientRect().y}px)`;
-    item13.style.transform = `translateX(${box.getBoundingClientRect().x}px)`;
-    item13.style.transition = 'transform 1s';
+    // let item13 = document.querySelector(".flexbox-item-13")
+    // // let X=item13.getBoundingClientRect().x;
+    // // let Y = item13.getBoundingClientRect().y;
+    // console.log(box.getBoundingClientRect().y)
+    // console.log(box.getBoundingClientRect().x)
+    // // item13.style.transform = `translateY(${box.getBoundingClientRect().y}px)`;
+    // // item13.style.transform = `translateX(${box.getBoundingClientRect().x}px)`;
+    // // item13.style.transition = 'transform 1s';
+    // box.style.transform = 'translateY(400px)';
+    // box.style.transform += 'translateX(400px)';
+    // box.style.transition = 'transform 1s';
 
     // box.style.transform = `translateY(${X}}px)`;
     // box.style.transform = `translateY(${Y}}px)`;
-    // box.style.transition = 'transform 1s';
+    
+    const footerGrid = document.querySelector(".footer-grid");
+    footerGrid.appendChild(box);
+    box.classList.add('animate');
+    footerGrid.style.transition = 'transform 1s';
+    box.style.transition = 'transform 1s';
 }
 
 
